@@ -60,13 +60,13 @@
   transform: translateX(-36px);
 }
 .hero-oval--center {
-  transform: translateX(-12px);
+  transform: translateX(0);
   background: #0f1113;
   color: #fff;
   padding: 28px;
 }
 .hero-oval--right {
-  transform: translateX(12px);
+  transform: translateX(0);
 }
 
 /* stacked (initial) state */
@@ -89,7 +89,7 @@
 
 /* opened (final) state */
 .hero-rows.is-open .hero-oval--left {
-  transform: translateX(-36px) scale(1) rotate(0deg);
+  transform: translateX(-0.5px) scale(1) rotate(0deg);
   z-index: 1;
 }
 .hero-rows.is-open .hero-oval--center {
@@ -97,7 +97,7 @@
   z-index: 3;
 }
 .hero-rows.is-open .hero-oval--right {
-  transform: translateX(36px) scale(1) rotate(0deg);
+  transform: translateX(0.5px) scale(1) rotate(0deg);
   z-index: 2;
 }
 
@@ -119,17 +119,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: cover;
   color: #fff;
   padding: 12px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.44));
   font-family: "Shellfont", Inter, system-ui, -apple-system;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   line-height: 1.1;
+  font-weight: 500;
+}
+
+/* ensure center oval text is white and readable */
+.hero-oval--center .intro-overlay p {
+  color: #fff !important;
 }
 
 .oval-content {
-  text-align: left;
+  text-align: center;
 }
 .oval-content .eyebrow {
   text-transform: uppercase;
@@ -143,7 +148,7 @@
   margin: 0.35rem 0;
 }
 .oval-content .muted {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.832);
 }
 
 .btn.small {
