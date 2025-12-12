@@ -3,11 +3,10 @@ import "./MarginalNav.css";
 
 export default function MarginalNav({ contact = {} }) {
   const {
-    name = "Your Name",
-    title = "Designer & Developer",
-    email = "you@example.com",
-    phone = "+00 000 000",
-    location = "City, Country",
+    name = "Selma Remander",
+    title = "Techincal Artist & Game Developer",
+    email = "selma.remander@gmail.com",
+    location = "Turku, Finland",
     socials = [],
   } = contact;
 
@@ -20,12 +19,11 @@ export default function MarginalNav({ contact = {} }) {
         </div>
 
         <div className="contact-block contact-center">
+          <span className="contact-intro">
+            If you'd like to work together, reach out at{" "}
+          </span>
           <a href={`mailto:${email}`} className="contact-link">
             {email}
-          </a>
-          <span className="contact-sep">•</span>
-          <a href={`tel:${phone}`} className="contact-link">
-            {phone}
           </a>
         </div>
 

@@ -36,7 +36,6 @@ export default function About({ onOpenProjects }) {
           onClick={handleOvalClick}
           aria-label="Open projects"
         >
-          <img src={sambiImg} alt="center" />
           <div className="intro-overlay">
             <p>
               Hi — I'm Your Name. I build modern web experiences that blend

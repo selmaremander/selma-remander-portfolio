@@ -39,11 +39,10 @@ function App() {
       />
       <MarginalNav
         contact={{
-          name: "Your Name",
-          title: "Designer & Developer",
-          email: "you@example.com",
-          phone: "+00 000 000",
-          location: "City, Country",
+          name: "Selma Remander",
+          title: "Technical Artist & Game Developer",
+          email: "selma.remander@gmail.com",
+          location: "Turku, Finland",
           socials: [
             { label: "LinkedIn", href: "https://linkedin.com" },
             { label: "GitHub", href: "https://github.com" },
