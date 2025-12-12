@@ -1,0 +1,99 @@
+.marginal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background: var(--lavender);
+  display: flex;
+  align-items: center;
+  z-index: 120;
+  box-shadow: 0 -12px 30px rgba(16, 16, 24, 0.06);
+  overflow: visible;
+}
+
+.marginal::before {
+  /* scalloped top edge tiled across the width */
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background-image: radial-gradient(
+    circle at 18px 18px,
+    var(--body-bg, #fff) 0 14px,
+    rgba(0, 0, 0, 0) 15px
+  );
+  background-size: 36px 36px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+}
+
+.marginal-inner {
+  width: min(1180px, 96%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.contact-block {
+  flex: 1;
+}
+.contact-left {
+  text-align: left;
+}
+.contact-center {
+  text-align: center;
+}
+.contact-right {
+  text-align: right;
+}
+
+.contact-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+.contact-title {
+  font-size: 0.9rem;
+}
+.contact-link {
+  color: #111;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.contact-sep {
+  margin: 0 8px;
+  color: rgba(0, 0, 0, 0.28);
+}
+.socials a {
+  margin-left: 8px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .marginal {
+    height: auto;
+    padding: 14px 8px;
+    position: static;
+    box-shadow: none;
+  }
+  .marginal::before {
+    display: none;
+  }
+  .marginal-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .contact-right,
+  .contact-left {
+    text-align: center;
+  }
+}

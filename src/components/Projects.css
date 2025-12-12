@@ -1,0 +1,19 @@
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.project-card {
+  background: linear-gradient(180deg, #fff, #fcfcfd);
+  border: 1px solid rgba(16, 16, 24, 0.04);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(16, 16, 24, 0.04);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}

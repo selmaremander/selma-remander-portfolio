@@ -1,0 +1,111 @@
+/* ProjectsView: modern magazine-style project grid */
+.panel-body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 28px;
+}
+
+.panel-project {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  align-items: start;
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(16, 16, 24, 0.06);
+}
+
+.panel-project h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+}
+
+/* Left column: stacked images (magazine feel). Right column: text/details */
+.panel-project .project-media {
+  grid-column: 1 / 7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 120px;
+  gap: 12px;
+}
+.panel-project .project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(16, 16, 24, 0.08);
+}
+
+.panel-project .media-text {
+  grid-column: 7 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 12px 6px;
+}
+.panel-project .media-text h4 {
+  margin: 0;
+  font-weight: 700;
+}
+.panel-project .media-text p {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Shellfont", Inter, system-ui;
+}
+
+/* Hover/animation for images */
+.panel-project .project-media .media-item img {
+  transition: transform 360ms cubic-bezier(0.2, 0.9, 0.25, 1), filter 320ms ease;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+.panel-project .project-media .media-item:hover img {
+  transform: scale(1.06) rotate(-0.6deg);
+  filter: saturate(1.06) contrast(1.02);
+}
+
+/* editorial collage: make first image tall */
+.panel-project .project-media .media-item:first-child {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.panel-project .project-media .media-item:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.panel-project .project-media .media-item:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* subtle caption reveal */
+.panel-project .media-text .shell-desc {
+  font-family: "Shellfont", Inter, system-ui;
+  opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+  .panel-body {
+    grid-template-columns: 1fr;
+  }
+  .panel-project {
+    grid-template-columns: 1fr;
+  }
+  .panel-project .project-media {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+  }
+  .panel-project .project-media img {
+    min-width: 160px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .panel-project .media-text {
+    grid-column: 1 / -1;
+  }
+}
