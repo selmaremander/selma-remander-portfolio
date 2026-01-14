@@ -37,11 +37,7 @@ export default function About({ onOpenProjects }) {
           aria-label="Open projects"
         >
           <div className="intro-overlay">
-            <p>
-              Hi — I'm Your Name. I build modern web experiences that blend
-              design and code. This is a brief intro — click any circle to see
-              projects.
-            </p>
+            <p>Click here or click any circle to see my projects.</p>
           </div>
         </button>
 

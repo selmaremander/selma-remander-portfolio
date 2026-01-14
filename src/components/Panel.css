@@ -28,3 +28,20 @@
 .panel-body {
   line-height: 1.55;
 }
+
+/* About panel: ensure body is not using the projects grid and uses Shellfont */
+.panel--about .panel-body {
+  display: block;
+  font-size: 1.15rem; /* increase base text size for readability */
+  line-height: 1.6;
+}
+
+.panel--about .panel-body p,
+.panel--about .panel-body * {
+  font-family: "Shellfont", Inter, system-ui, -apple-system;
+  color: var(--text);
+}
+
+.panel--about .panel-header h1 {
+  font-size: 2rem;
+}
