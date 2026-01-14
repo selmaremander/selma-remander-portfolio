@@ -7,6 +7,22 @@ import sambi from "../assets/images/sambi.jpg";
 export default function ProjectsView({ onClose }) {
   return (
     <div className="overlay">
+      <div className="squiggles" aria-hidden="true">
+        <svg
+          className="squiggle squiggle--1"
+          viewBox="0 0 2400 200"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,80 C300,10 700,150 1200,90 C1700,30 2100,150 2400,100"
+            fill="none"
+            stroke="rgba(155,123,255,0.32)"
+            strokeWidth="20"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+
       <div className="panel">
         <header className="panel-header">
           <h1>Projects</h1>
