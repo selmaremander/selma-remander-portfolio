@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./About.css";
 import "./Panel.css";
-import sambiImg from "../assets/images/sambi.jpg";
+import alienImg from "../assets/images/alien lemmikki basic.png";
 
 export default function About({ onOpenProjects }) {
   const [mounted, setMounted] = useState(false);
@@ -64,7 +64,7 @@ export default function About({ onOpenProjects }) {
             onClick={handleOvalClick}
             aria-label="Open projects"
           >
-            <img src={sambiImg} alt="right" />
+            <img src={alienImg} alt="right" />
           </button>
         </div>
       </div>
