@@ -1,5 +1,6 @@
 .overlay {
   position: relative;
+  min-height: 64vh;
 }
 
 .panel {
@@ -10,6 +11,8 @@
   color: var(--text);
   border-radius: 16px;
   box-shadow: 0 24px 80px rgba(16, 16, 24, 0.06);
+  position: relative;
+  z-index: 2;
 }
 
 .panel-header {
@@ -32,8 +35,8 @@
 /* About panel: ensure body is not using the projects grid and uses Shellfont */
 .panel--about .panel-body {
   display: block;
-  font-size: 1.15rem; /* increase base text size for readability */
-  line-height: 1.6;
+  font-size: 1.9rem; /* increase base text size for readability */
+  line-height: 1.2;
 }
 
 .panel--about .panel-body p,
@@ -44,4 +47,101 @@
 
 .panel--about .panel-header h1 {
   font-size: 2rem;
+}
+
+/* Squiggles background styling and animation */
+.squiggles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* push the squiggles lower so they're visible beneath the panel */
+  top: 28%;
+  /* make the container taller so shapes aren't clipped */
+  height: 60vh;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+}
+.squiggles .squiggle {
+  position: absolute;
+  /* extend each path well beyond the viewport so lines run edge-to-edge */
+  left: 50%;
+  width: 120%;
+  height: 220px;
+  transform-origin: center;
+  opacity: 1;
+}
+.squiggle--1 {
+  /* slightly lower than before */
+  top: -65%;
+  transform: scaleX(0.98);
+  animation: float1 28s linear infinite;
+}
+.squiggle--2 {
+  top: 28%;
+  transform: scaleX(1.05);
+  animation: float2 34s linear infinite;
+}
+.squiggle--3 {
+  top: 54%;
+  transform: scaleX(0.98);
+  animation: float3 40s linear infinite;
+}
+.squiggle--4 {
+  top: 70%;
+  transform: scaleX(1.15);
+  opacity: 0.95;
+  animation: float4 46s linear infinite;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translateX(-52%) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-48%) translateY(28px) rotate(0.2deg);
+  }
+  100% {
+    transform: translateX(-52%) translateY(0) rotate(0deg);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-0.2deg);
+  }
+  50% {
+    transform: translateX(-46%) translateY(-22px) rotate(0.2deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-0.2deg);
+  }
+}
+@keyframes float3 {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-54%) translateY(24px) rotate(-0.3deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+}
+@keyframes float4 {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0.2deg);
+  }
+  50% {
+    transform: translateX(-56%) translateY(-30px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0.2deg);
+  }
+}
+
+/* make sure squiggles are subtle on small screens */
+@media (max-width: 900px) {
+  .squiggles {
+    display: none;
+  }
 }
