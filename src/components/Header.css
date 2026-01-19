@@ -49,6 +49,29 @@
   box-shadow: 0 8px 24px rgba(16, 16, 24, 0.06);
 }
 
+.nav .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  background: #9b7bff;
+  border: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  cursor: pointer;
+  height: auto;
+  line-height: 1;
+  transform: translateY(-6px);
+}
+
+.nav .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(155, 123, 255, 0.3);
+}
+
 @media (max-width: 700px) {
   .header-inner {
     flex-direction: row;

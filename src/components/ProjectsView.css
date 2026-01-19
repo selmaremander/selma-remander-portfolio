@@ -1,4 +1,4 @@
-/* ProjectsView: editorial magazine layout with vertical sidebar */
+/* ProjectsView: editorial magazine type layout */
 
 .panel--projects {
   display: grid;
@@ -26,7 +26,7 @@
   margin: 0;
   color: var(--text);
   line-height: 1;
-  font-family: Inter, system-ui, -apple-system;
+  font-family: "Playfair Display", Inter, serif;
 }
 
 .projects-content {

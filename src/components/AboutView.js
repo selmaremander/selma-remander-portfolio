@@ -61,7 +61,7 @@ export default function AboutView({ onClose }) {
 
       <div className="panel panel--about">
         <div className="about-sidebar">
-          <h1 className="about-title">about me</h1>
+          <h1 className="about-title">ABOUT ME</h1>
         </div>
 
         <div className="about-content">

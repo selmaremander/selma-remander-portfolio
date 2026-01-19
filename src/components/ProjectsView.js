@@ -25,7 +25,7 @@ export default function ProjectsView({ onClose }) {
 
       <div className="panel panel--projects">
         <div className="projects-sidebar">
-          <h1 className="projects-title">projects</h1>
+          <h1 className="projects-title">PROJECTS</h1>
         </div>
 
         <div className="projects-content">

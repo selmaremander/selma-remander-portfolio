@@ -31,9 +31,6 @@ export default function Header({ onOpenAbout, onOpenProjects, onHome }) {
   return (
     <header className={`site-header ${hidden ? "hidden" : ""}`}>
       <div className="header-inner">
-        <button className="btn small" onClick={() => onHome && onHome()}>
-          Home
-        </button>
         <nav className="nav" aria-label="Main navigation">
           <a
             href="#about"
@@ -53,7 +50,9 @@ export default function Header({ onOpenAbout, onOpenProjects, onHome }) {
           >
             Projects
           </a>
-          <a href="#contact">Contact</a>
+          <button className="btn small" onClick={() => onHome && onHome()}>
+            Home
+          </button>
         </nav>
       </div>
     </header>

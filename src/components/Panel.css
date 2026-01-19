@@ -3,7 +3,7 @@
   min-height: 64vh;
 }
 
-.panel:not(.panel--about) {
+.panel:not(.panel--about):not(.panel--projects) {
   max-width: 1180px;
   margin: 0 auto;
   padding: 2rem;
@@ -58,7 +58,7 @@
   margin: 0;
   color: var(--text);
   line-height: 1;
-  font-family: Inter, system-ui, -apple-system;
+  font-family: "Playfair Display", Inter, serif;
 }
 
 .about-content {
@@ -114,7 +114,7 @@
   }
 
   .about-title {
-    font-size: 1.6rem;
+    font-size: 3rem;
     writing-mode: horizontal-tb;
     transform: none;
   }
@@ -129,7 +129,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  /* push the squiggles lower so they're visible beneath the panel */
+  /* pushing the squiggles */
   top: 28%;
   /* make the container taller so shapes aren't clipped */
   height: 60vh;

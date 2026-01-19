@@ -134,8 +134,9 @@
   text-align: center;
   color: #fff;
   padding: 12px;
-  font-family: "Shellfont", Inter, system-ui, -apple-system;
-  font-size: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   line-height: 1.1;
   font-weight: 500;
 }
