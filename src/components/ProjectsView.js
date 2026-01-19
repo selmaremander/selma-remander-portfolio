@@ -23,40 +23,69 @@ export default function ProjectsView({ onClose }) {
         </svg>
       </div>
 
-      <div className="panel">
-        <header className="panel-header">
-          <h1>Projects</h1>
-        </header>
-        <div className="panel-body">
-          {projects.map((p) => (
-            <article key={p.id} className="panel-project">
-              <h3>{p.title}</h3>
+      <div className="panel panel--projects">
+        <div className="projects-sidebar">
+          <h1 className="projects-title">projects</h1>
+        </div>
 
-              <div className="project-media">
-                {(p.images || [sambi, sambi, sambi]).map((imgSrc, i) => {
-                  const key = `${p.id}-img-${i}`;
-                  const src = imgSrc || sambi;
-                  return (
-                    <div key={key} className={`media-item`}>
-                      <img src={src} alt={`${p.title} ${i + 1}`} />
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="media-text">
-                <h4>{p.title}</h4>
-                <p className="shell-desc">{p.description}</p>
-                {p.link && (
-                  <p>
-                    <a href={p.link} target="_blank" rel="noopener noreferrer">
-                      View
-                    </a>
-                  </p>
-                )}
-              </div>
-            </article>
-          ))}
+        <div className="projects-content">
+          <div className="projects-grid">
+            {projects.map((p, idx) => {
+              const imgSrc = p.images?.[0] || sambi;
+              // alternate layout: image-text-image pattern
+              const isEven = idx % 2 === 0;
+              return (
+                <div
+                  key={p.id}
+                  className={`project-block ${
+                    isEven ? "block--image-right" : "block--image-left"
+                  }`}
+                >
+                  {isEven ? (
+                    <>
+                      <div className="block-text">
+                        <h3>{p.title}</h3>
+                        <p>{p.description}</p>
+                        {p.link && (
+                          <a
+                            href={p.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-link"
+                          >
+                            View Project →
+                          </a>
+                        )}
+                      </div>
+                      <div className="block-image">
+                        <img src={imgSrc} alt={p.title} />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="block-image">
+                        <img src={imgSrc} alt={p.title} />
+                      </div>
+                      <div className="block-text">
+                        <h3>{p.title}</h3>
+                        <p>{p.description}</p>
+                        {p.link && (
+                          <a
+                            href={p.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-link"
+                          >
+                            View Project →
+                          </a>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
