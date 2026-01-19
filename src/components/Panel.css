@@ -3,7 +3,7 @@
   min-height: 64vh;
 }
 
-.panel {
+.panel:not(.panel--about) {
   max-width: 1180px;
   margin: 0 auto;
   padding: 2rem;
@@ -32,10 +32,43 @@
   line-height: 1.55;
 }
 
+.panel--about {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.about-sidebar {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.about-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin: 0;
+  color: var(--text);
+  line-height: 1;
+  font-family: Inter, system-ui, -apple-system;
+}
+
+.about-content {
+  padding: 2rem 0;
+}
+
 /* About panel: ensure body is not using the projects grid and uses Shellfont */
 .panel--about .panel-body {
   display: block;
-  font-size: 1.9rem; /* increase base text size for readability */
+  font-size: 1.9rem;
   line-height: 1.2;
 }
 
@@ -47,6 +80,48 @@
 
 .panel--about .panel-header h1 {
   font-size: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .panel--about {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-sidebar {
+    min-height: auto;
+    padding: 1rem 0;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel--about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-sidebar {
+    position: relative;
+    min-height: auto;
+    padding: 0 0 1rem 0;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .panel--about .panel-body {
+    font-size: 1.2rem;
+  }
 }
 
 /* Squiggles background styling and animation */
