@@ -17,13 +17,6 @@
   gap: 1rem;
 }
 
-.logo {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
 .nav {
   display: flex;
   gap: 0.6rem;
@@ -62,8 +55,6 @@
   border: none;
   transition: transform 120ms ease, box-shadow 120ms ease;
   cursor: pointer;
-  height: auto;
-  line-height: 1;
   transform: translateY(-6px);
 }
 
