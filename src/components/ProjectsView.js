@@ -58,13 +58,61 @@ export default function ProjectsView({ onClose }) {
                         )}
                       </div>
                       <div className="block-image">
-                        <img src={imgSrc} alt={p.title} />
+                        <div className="image-mosaic">
+                          {p.images && p.images.length > 0 && (
+                            <>
+                              <img
+                                src={p.images[0]}
+                                alt={`${p.title} 1`}
+                                className="mosaic-img img--1"
+                              />
+                              {p.images[1] && (
+                                <img
+                                  src={p.images[1]}
+                                  alt={`${p.title} 2`}
+                                  className="mosaic-img img--2"
+                                />
+                              )}
+                              {p.images[2] && (
+                                <img
+                                  src={p.images[2]}
+                                  alt={`${p.title} 3`}
+                                  className="mosaic-img img--3"
+                                />
+                              )}
+                            </>
+                          )}
+                        </div>
                       </div>
                     </>
                   ) : (
                     <>
                       <div className="block-image">
-                        <img src={imgSrc} alt={p.title} />
+                        <div className="image-mosaic">
+                          {p.images && p.images.length > 0 && (
+                            <>
+                              <img
+                                src={p.images[0]}
+                                alt={`${p.title} 1`}
+                                className="mosaic-img img--1"
+                              />
+                              {p.images[1] && (
+                                <img
+                                  src={p.images[1]}
+                                  alt={`${p.title} 2`}
+                                  className="mosaic-img img--2"
+                                />
+                              )}
+                              {p.images[2] && (
+                                <img
+                                  src={p.images[2]}
+                                  alt={`${p.title} 3`}
+                                  className="mosaic-img img--3"
+                                />
+                              )}
+                            </>
+                          )}
+                        </div>
                       </div>
                       <div className="block-text">
                         <h3>{p.title}</h3>
