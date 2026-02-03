@@ -66,16 +66,23 @@ export default function AboutView({ onClose }) {
 
         <div className="about-content">
           <div className="panel-body">
+            <h2>Hello,</h2>
             <p>
-              Hi, I am a 3rd year student at Turku University of Applied
-              Sciences. Studying to become a game developer and technical
-              artist. I have a passion for creating immersive experiences and
-              bringing virtual worlds to life. In my free time, I enjoy
-              exploring new technologies, playing video games, and collaborating
-              on creative projects. This portfolio showcases some of my work and
-              highlights my skills in game development and technical artistry.
-              Thank you for visiting!
+              My name is Selma Remander. I am a 3rd year student at Turku
+              University of Applied Sciences currently specializing in Game and
+              Interactive technologies. I am in the beginning of my career and
+              still figuring out exactly where I want to land, but I’m excited
+              to try different creative and technical paths and see what sticks.
             </p>
+            <br></br>
+            <h2>Skills & what I'm learning</h2>
+            <p>
+              My dream is to work as an UI/UX designer and developer. Here are
+              some of the skills I have: Python, JavaScript, C#, HTML
+            </p>
+            <br></br>
+            <h2>In my free time I</h2>
+            <p>Do cheerleading, hang out with friends, play video games.</p>
           </div>
         </div>
       </div>
