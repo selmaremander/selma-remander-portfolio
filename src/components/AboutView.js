@@ -1,5 +1,6 @@
 import React from "react";
 import "./Panel.css";
+import sambi from "../assets/images/sambi.jpg";
 
 export default function AboutView({ onClose }) {
   return (
@@ -84,6 +85,13 @@ export default function AboutView({ onClose }) {
             <h2>In my free time I</h2>
             <p>Do cheerleading, hang out with friends, play video games.</p>
           </div>
+        </div>
+        <div className="about-photo" aria-hidden="true">
+          <img src={sambi} alt="Sambi" />
+          <span className="dot dot--1" />
+          <span className="dot dot--2" />
+          <span className="dot dot--3" />
+          <span className="dot dot--4" />
         </div>
       </div>
     </div>
