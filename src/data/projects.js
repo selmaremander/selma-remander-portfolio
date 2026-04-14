@@ -3,9 +3,9 @@ import sambi from "../assets/images/sambi.jpg";
 const projects = [
   {
     id: "p1",
-    title: "Solo 2D videogame project",
+    title: "School Group Project, PikeGame",
     description:
-      "a school project where i used unity to create a videogame from scratch. I made everything in the game by myself, from coding to art assets.",
+      "I worked as a programmer and UI artist.'PikeGame'Can be found in the apple store and play store.",
     images: [sambi, sambi, sambi],
   },
   {
