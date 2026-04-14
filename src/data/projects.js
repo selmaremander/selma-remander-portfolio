@@ -1,27 +1,32 @@
-import sambi from "../assets/images/sambi.jpg";
+import pike2 from "../assets/images/pike2.png";
+import pike5 from "../assets/images/pike5.png";
+import joopajoo from "../assets/images/joopajoo.png";
+import ohjain from "../assets/images/ohjain.png";
+import kuvislukio from "../assets/images/kuvislukio.jpeg";
 
 const projects = [
   {
     id: "p1",
     title: "School Group Project, PikeGame",
     description:
-      "I worked as a programmer and UI artist.'PikeGame'Can be found in the apple store and play store.",
-    images: [sambi, sambi, sambi],
+      "I worked as a programmer and UI artist. 'PikeGame'Can be found in the apple store and play store.",
+    link: "https://play.google.com/store/apps/details?id=com.TurkuAMK.PikeGame&hl=en-US",
+    images: [pike5, pike2],
   },
   {
     id: "p2",
     title: "Website Portfolio",
     description: "Learning web developement with react.",
     link: "",
-    images: [sambi, sambi, sambi],
+    images: [kuvislukio, joopajoo, joopajoo],
   },
   {
     id: "p3",
-    title: "School Group Project, FailsafeProtocol",
+    title: "School Group Project, IceBreaker",
     description:
-      "An action game where I learned to animate 2D characters for 3D environments.",
+      "An serious game for icebreak safety. I worked as a programmer and UI artist.",
     link: "",
-    images: [sambi, sambi, sambi],
+    images: [ohjain, ohjain, ohjain],
   },
 ];
 
