@@ -1,6 +1,7 @@
 import React from "react";
 import "./Panel.css";
 import sambi from "../assets/images/sambi.jpg";
+import japanicute from "../assets/images/japanicute.png";
 
 export default function AboutView({ onClose }) {
   return (
@@ -87,7 +88,7 @@ export default function AboutView({ onClose }) {
           </div>
         </div>
         <div className="about-photo" aria-hidden="true">
-          <img src={sambi} alt="Sambi" />
+          <img src={japanicute} alt="japanicute" />
           <span className="dot dot--1" />
           <span className="dot dot--2" />
           <span className="dot dot--3" />
